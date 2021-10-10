@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointments</title>
+    <link href="./css/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="header">
+      <div class="header container">
+        <div class="nav-bar">
+          <div class="brand">
+            <h1>Nude Studio</h1>
+          </div>
+          <div class="nav-list">
+            <div class="hamburger"><div class="bar"></div></div>
+            <ul>
+              <li>
+                <a href="index.html" data-after="Home">Home</a>
+              </li>
+              <li><a href="About.html" data-after="About">About us</a></li>
+              <li><a href="Price.html" data-after="Price">Price</a></li>
+              <li class="active-menu">
+                <a href="#" data-after="Appointments">Appointments</a>
+              </li>
+              <li>
+                <a href="PhotoGallery.html" data-after="Photo Gallery"
+                  >PhotoGallery</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="appointments">
+      <div class="apps-page">
+        <div class="form">
+          <form>
+            <fieldset>
+              <legend>Make an Appointment</legend>
+
+              <div class="name md">
+                <label for="name">Name:</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="name"
+                  placeholder="Youк name please"
+                />
+              </div>
+
+              <div class="phone md">
+                <label for="phone">Phone:</label>
+                <input
+                  id="phone"
+                  type="phone"
+                  placeholder="Your number please"
+                />
+              </div>
+              <label for="appt">Choose a suitable time:</label>
+
+              <input
+                type="time"
+                id="appt"
+                name="appt"
+                min="09:00"
+                max="18:00"
+                required
+              />
+              <div class="textarea md">
+                <div>
+                  <label for="start">Start date:</label>
+
+                  <input
+                    type="date"
+                    id="start"
+                    name="procedure-start"
+                    placeholder="2021-09-01"
+                    min="2021-09-01"
+                    max="2022-09-01"
+                  />
+                  <br />
+
+                  <label for="textarea" class="textarea">Procedure:</label>
+                </div>
+                <div>
+                  <textarea
+                    id="textarea"
+                    class="textarea"
+                    placeholder="Which procedure do you want to have?"
+                    name="textarea"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div>
+                <button class="button" type="button" name="button1">
+                  Send
+                </button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div class="contacts-appts">
+          <h1>Contact info:</h1>
+          <p>Address: Lenina str. 25. Minsk</p>
+          <p>Telegram: +375296452936</p>
+          <p>Phone: +375296452936, +375175492645</p>
+        </div>
+      </div>
+    </section>
+    <section id="footer">
+      <div class="footer container">
+        <div class="studio-name"><h1>Nude studio</h1></div>
+        <h2>Your perfect studio</h2>
+        <div class="social-icon">
+          <div class="social-item">
+            <a href="#"
+              ><img
+                src="https://img.icons8.com/bubbles/50/000000/facebook-new.png"
+                alt="icon"
+            /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"
+              ><img
+                src="https://img.icons8.com/bubbles/50/000000/instagram.png"
+                alt="icon"
+            /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"
+              ><img
+                src="https://img.icons8.com/bubbles/50/000000/twitter.png"
+                alt="icon"
+            /></a>
+          </div>
+        </div>
+        <p>All rights reserved. 2021. Anna Lastochkina</p>
+      </div>
+    </section>
+    <script src="./app.js"></script>
+  </body>
+</html>

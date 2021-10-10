@@ -1,0 +1,1037 @@
+/* Main */
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+}
+a {
+  text-decoration: none;
+}
+.section-bg-title {
+  background: rgba(168, 136, 96, 0.1);
+  width: 100%;
+}
+.section-title {
+  font-size: 40px;
+  color: sandybrown;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 20px 0;
+  font-family: "Dancing Script", cursive;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.active-menu {
+  text-decoration: underline;
+  font-weight: bold;
+  color: sandybrown;
+}
+
+/* MAIN PAGE SECTIONS */
+
+/* Modal window  */
+.arcticmodal-container .arcticmodal-container_i2 .box-modal {
+  font-size: 27px;
+  position: absolute;
+  width: 60vw;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(161, 92, 7, 0.5);
+  border-radius: 20px;
+}
+
+/* Header */
+#header {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: auto;
+}
+#header .header {
+  min-height: 10vh;
+  background-color: rgba(161, 92, 7, 0.1);
+}
+#header .brand {
+  margin-left: 20px;
+  color: white;
+  font-family: "Dancing Script", cursive;
+}
+.header .nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  max-width: 1400px;
+  padding: 0;
+}
+#header .nav-list ul {
+  list-style: none;
+  position: absolute;
+  background-color: rgb(161, 92, 7);
+  width: 100vw;
+  height: 100vh;
+  left: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  overflow: hidden;
+  padding-left: 0px;
+  transition: 0.5s ease left;
+  margin: 0;
+}
+#header .nav-list ul.active {
+  left: 0;
+}
+#header .nav-list ul a {
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 20px;
+  display: block;
+}
+#header .nav-list ul a:after {
+  content: attr(data-after);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: rgba(255, 255, 255, 0.1);
+  font-size: 80px;
+  letter-spacing: 50px;
+  z-index: -1;
+  padding-left: 10px;
+  transition: 1s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after {
+  transform: translate(-50%, -50%) scale(1);
+  letter-spacing: initial;
+}
+#header .nav-list ul li:hover a {
+  color: sandybrown;
+}
+#header .hamburger {
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  border: 3px solid white;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  cursor: pointer;
+  transform: scale(0.8);
+  margin-right: 10px;
+}
+#header .hamburger::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+#header .hamburger .bar {
+  height: 2px;
+  width: 30px;
+  position: relative;
+  background-color: white;
+  z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background-color: white;
+  transition: 0.3s ease;
+}
+#header .hamburger .bar::after {
+  top: 8px;
+}
+#header .hamburger .bar::before {
+  bottom: 8px;
+}
+#header .hamburger.active .bar::before {
+  bottom: 0;
+}
+#header .hamburger.active .bar::after {
+  top: 0;
+}
+/* End Header */
+/* main photo section */
+#main-photo {
+  background-image: url("../img/main-photo.jpg");
+  background-size: cover;
+  background-position: top center;
+}
+#main-photo .container {
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main-photo h1 {
+  display: block;
+  width: fit-content;
+
+  color: rgb(161, 92, 7);
+}
+#main-photo .btn {
+  position: relative;
+  top: -32px;
+  left: 8px;
+  display: inline-block;
+  padding: 10px 30px;
+  color: sandybrown;
+  background-color: transparent;
+  border: 2px solid sandybrown;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  margin-top: 30px;
+  transition: 0.5s ease background-color;
+  border-radius: 20px;
+}
+#main-photo .btn:hover {
+  color: white;
+  background-color: sandybrown;
+}
+#main-photo h1 span {
+  font-family: "Dancing Script", cursive;
+  color: sandybrown;
+  font-size: 50px;
+}
+#main-photo .main-photo {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 10px 0;
+  justify-content: flex-start;
+}
+/* end main photo section */
+
+/* Slider */
+.slider {
+  width: 100%;
+  padding: 10px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.slider .my-slide img {
+  width: 60%;
+  padding-left: 25%;
+
+  object-fit: cover;
+}
+
+.slider .slick-prev {
+  left: 50px;
+  z-index: 101;
+}
+
+.slider .slick-next {
+  right: 50px;
+  z-index: 101;
+}
+
+.slider .slick-next::before,
+.slider .slick-prev::before {
+  color: sandybrown;
+  font-size: 30px;
+}
+/* End Slider */
+/* Service section */
+#services .service {
+  flex-direction: column;
+  font-size: 15px;
+  text-align: center;
+  margin: 0 auto;
+}
+#services .section-bg-title {
+  background: rgba(161, 92, 7, 0.1);
+  width: 100%;
+}
+#services .container {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  margin: 0;
+}
+
+#services .btn {
+  display: inline-block;
+  padding: 15px 40px;
+  color: sandybrown;
+  background-color: transparent;
+  border: 2px solid sandybrown;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  margin-bottom: 15px;
+  transition: 0.5s ease background-color;
+  border-radius: 20px;
+}
+#services .btn:hover {
+  color: white;
+  background-color: sandybrown;
+}
+#services .service-cards .service-item a {
+  text-decoration: none;
+  color: rgb(161, 92, 7);
+}
+#services .service-info p {
+  color: rgb(161, 92, 7);
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+  line-height: 25px;
+}
+#services .service-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#services .service-item {
+  flex-basis: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+
+  background-image: url("https://homeconcept.ru/upload/iblock/789/White-Feathers.jpg");
+  background-size: cover;
+  margin: 20px;
+}
+
+#services .service-item p {
+  padding-left: 20px;
+}
+#services .service-item:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: 1s ease;
+}
+#services .service-cards .service-item .icon img {
+  width: 70px;
+  height: 70px;
+}
+/* End Service section */
+
+/* About section */
+#about .about {
+  display: flex;
+  color: rgba(161, 92, 7, 0.9);
+}
+#about .about-info h2 span {
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  font-size: 50px;
+}
+#about img {
+  width: 600px;
+  border-radius: 10px;
+}
+
+#about .team-photo {
+  margin: 20px;
+}
+#about .about-info {
+  margin: 0 30px;
+}
+.btn-about {
+  display: inline-block;
+  padding: 15px 30px;
+  color: sandybrown;
+  background-color: transparent;
+  border: 2px solid sandybrown;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  transition: 0.5s ease background-color;
+  border-radius: 20px;
+}
+#about .btn-about:hover {
+  color: white;
+  background-color: sandybrown;
+}
+#about input {
+  width: 50%;
+  height: 45px;
+}
+.about-photo img {
+  margin-left: auto;
+  margin-right: auto;
+}
+/*end About section */
+
+/* Photogallery section*/
+.btn-gallery {
+  display: inline-block;
+  padding: 15px 30px;
+  color: sandybrown;
+  background-color: transparent;
+  border: 2px solid sandybrown;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  transition: 0.5s ease background-color;
+  border-radius: 20px;
+}
+.photogallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 3fr));
+  grid-auto-rows: 300px;
+  grid-gap: 7px;
+  grid-auto-flow: dense;
+  margin: 20px;
+  max-width: 1500px;
+}
+
+#photogallery .photogallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+.photogallery__item__big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.photogallery__item_horizontal {
+  grid-row: span 2;
+}
+.photogallery__item_vertical {
+  grid-column: span 2;
+}
+.photogallery__item img:hover {
+  transform: scale(1.2);
+  transition: 1s ease;
+}
+#photogallery .btn-gallery:hover {
+  color: white;
+  background-color: sandybrown;
+}
+
+#photogallery .btn-centered {
+  position: relative;
+  left: 50vw;
+  transform: translateX(-104px);
+}
+
+/* End Photogallery */
+
+/* Contact section */
+#contact {
+  flex-direction: column;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+#contact .contact-items {
+  width: 100%;
+  display: flex;
+
+  justify-items: center;
+}
+#contact .container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  margin: 0;
+}
+#contact .contact-item {
+  display: flex;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 30px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 18px 0 #000002;
+  flex-direction: column;
+  transition: 0.3s ease box-shadow;
+}
+#contact .contact-item:hover {
+  box-shadow: 0px 0px 5px 0 #000002;
+}
+#contact .icon {
+  width: 70px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+#contact .contact-info h1 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+#contact .contact-info h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+/* End Contact section */
+/* Footer */
+#footer {
+  background: rgba(161, 92, 7, 0.3);
+}
+#footer .footer {
+  min-height: 200px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+#footer .studio-name {
+  font-family: "Dancing Script", cursive;
+  color: sandybrown;
+  font-size: 40px;
+}
+#footer h2 {
+  color: white;
+  font-weight: 500;
+  font-size: 30px;
+}
+#footer .social-icon {
+  display: flex;
+  margin-bottom: 30px;
+}
+#footer .social-item {
+  height: 50px;
+  width: 50px;
+  margin-bottom: 5px;
+  transition: 0.5s ease;
+}
+#footer .social-item:hover {
+  transform: scale(1.2);
+}
+#footer p {
+  color: white;
+  font-size: smaller;
+}
+/* End Footer */
+
+/* PAGES */
+
+/* Appointments page*/
+.apps-page {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+fieldset {
+  background-color: white;
+  border: 2px solid sandybrown;
+  padding-left: 30px;
+  padding-top: 100px;
+  width: 40vw;
+  margin-top: 150px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  position: relative;
+  border-radius: 15px;
+}
+
+legend {
+  font-family: "Dancing Script", cursive;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 100%;
+  height: 60px;
+  background-color: sandybrown;
+  text-align: center;
+  line-height: 60px;
+  color: white;
+  font-size: 30px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.md {
+  margin-bottom: 10px;
+}
+
+.buttons {
+  width: 200px;
+  margin: 10px auto;
+}
+
+label {
+  display: block;
+  margin: 5px 0;
+}
+textarea {
+  border-radius: 5px;
+  border: 2px solid sandybrown;
+}
+input {
+  width: 86%;
+  border-radius: 5px;
+  border: 2px solid sandybrown;
+  margin-bottom: 5px;
+  height: 23px;
+  padding-left: 29px;
+  background-size: 22px 22px;
+  background-repeat: no-repeat;
+  background-position: 3px;
+}
+
+#appointments .button {
+  display: inline-block;
+  padding: 15px 30px;
+  color: sandybrown;
+  background-color: transparent;
+  border: 2px solid sandybrown;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  transition: 0.5s ease background-color;
+  border-radius: 20px;
+}
+#appointments .button:hover {
+  color: white;
+  background-color: sandybrown;
+}
+
+.contacts-appts {
+  width: 30vw;
+  border: 2px solid sandybrown;
+  padding-left: 30px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  border-radius: 15px;
+  margin-top: 150px;
+  padding-top: 30px;
+}
+
+.contacts-appts h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 60px;
+  color: sandybrown;
+  font-weight: bold;
+}
+.contacts-appts p {
+  color: rgba(161, 92, 7, 0.9);
+
+  font-size: 30px;
+}
+/* End Appointments page*/
+
+/* Price page */
+#price .price {
+  font-size: 15px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 5px 20px;
+  background: rgba(161, 92, 7, 0.1);
+}
+#price .price-title {
+  font-size: 30px;
+  color: sandybrown;
+  text-align: center;
+  margin-top: 155px;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  font-family: "Dancing Script", cursive;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+#price h2 {
+  color: rgb(161, 92, 7);
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 5px 0;
+  font-family: "Dancing Script", cursive;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+#price img {
+  width: 300px;
+  height: auto;
+  background-size: cover;
+}
+#price ul {
+  list-style-type: none;
+  font-size: 24px;
+  text-align: left;
+}
+
+#price .price-item {
+  display: flex;
+  padding-bottom: 20px;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+/* End Price page */
+
+/* About page */
+.about-title {
+  margin-top: 90px;
+}
+
+.about-main-info {
+  margin: 10px 50px;
+}
+
+.about-photo img {
+  display: block;
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 15px repeat(4, 1fr) 15px;
+  grid-auto-rows: auto;
+}
+.card {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.about-wrapper .card img {
+  width: 200px;
+  height: 200px;
+}
+.card1 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.card2 {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.card3 {
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+.card4 {
+  grid-column: 5/6;
+  grid-row: 1/2;
+}
+.card5 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.card6 {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+.card7 {
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+/* End About page */
+
+/* Gallery page*/
+.gallery {
+  margin: 50px 30px;
+}
+.gallery img {
+  width: 200px;
+  padding: 10px;
+  transition: 0.5s ease;
+}
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* End Gallery page*/
+
+/* Media Query */
+@media only screen and (min-width: 1200px) {
+  #header .hamburger {
+    display: none;
+  }
+  #header .nav-list ul {
+    position: initial;
+    display: block;
+    height: auto;
+    width: fit-content;
+    background-color: transparent;
+  }
+  #header .nav-list ul li {
+    display: inline-block;
+  }
+  #header .nav-list ul li a {
+    font-size: 20px;
+    padding: 10px;
+  }
+  #header .nav-list ul a::after {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #about .about {
+    flex-direction: column;
+    color: #a15c07e6;
+    align-items: center;
+    justify-items: center;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .card4 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .arcticmodal-container .arcticmodal-container_i2 .box-modal {
+    font-size: 19px;
+  }
+  #contact .contact-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contact .contact {
+    flex-direction: column;
+    padding: 50px 0;
+    align-items: center;
+    justify-content: center;
+    min-width: 20vh;
+  }
+
+  #contact .contact-item {
+    text-align: center;
+    border-radius: 10px;
+    padding: 23px;
+    margin: 25px;
+    justify-content: unset;
+  }
+  .apps-page {
+    flex-direction: column;
+  }
+
+  fieldset {
+    background-color: white;
+    border: 2px solid sandybrown;
+    padding-left: 30px;
+    padding-top: 100px;
+    width: 80vw;
+    margin-top: 150px;
+    margin-left: 55px;
+    position: relative;
+    border-radius: 15px;
+  }
+  .contacts-appts {
+    width: 80vw;
+    border: 2px solid sandybrown;
+    padding-left: 30px;
+    margin-bottom: 50px;
+    margin-left: 55px;
+    border-radius: 15px;
+    margin-top: 10px;
+    padding-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .card3 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+  .card7 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+}
+@media only screen and (max-width: 635px) {
+  #about img {
+    width: 100vw;
+  }
+}
+@media only screen and (max-width: 580px){
+  fieldset {width: 75vw}
+  .contacts-appts {
+    width: 78vw;
+}
+
+
+
+@media only screen and (max-width: 476px) {
+  .about-wrapper {
+    grid-template-columns: 5px 1fr 5px;
+  }
+  .card {
+    margin: 5px;
+  }
+  .card1 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .card2 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .card3 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  .card4 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+  .card5 {
+    grid-column: 2/3;
+    grid-row: 5/6;
+  }
+  .card6 {
+    grid-column: 2/3;
+    grid-row: 6/7;
+  }
+  .card7 {
+    grid-column: 2/3;
+    grid-row: 7/8;
+  }
+}
+@media only screen and (max-width: 460px) {
+  #main-photo h1 {
+    display: block;
+    width: fit-content;
+
+    position: relative;
+    top: 210px;
+    left: 8px;
+    font-size: 20px;
+    color: rgb(161, 92, 7);
+  }
+  #main-photo .btn {
+    position: relative;
+    top: 174px;
+    left: 7px;
+    display: inline-block;
+    padding: 10px 5px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  #main-photo h1 span {
+    font-size: 30px;
+    color: rgb(161, 92, 7);
+  }
+}
+@media only screen and (max-width: 442px){
+  fieldset {
+    margin-left: 28px;
+}
+  .contacts-appts {
+    width: 84vw;
+    margin-left: 15px;
+  }
+}
+
+
+@media only screen and (max-width: 400px) {
+  #main-photo h1 {
+    font-size: 20px;
+    top: 220px;
+    left: 16px;
+  }
+
+  .section-title {
+    font-size: 30px;
+    margin-bottom: 5px;
+    padding: 20px 0;
+  }
+  #main-photo .btn {
+    top: 181px;
+  }
+
+  #contact .contact-items {
+    width: 100%;
+    flex-direction: column;
+    margin: -50px;
+    padding: 0;
+  }
+  #contact .contact-item {
+    text-align: center;
+    border-radius: 10px;
+    padding: 23px;
+    margin: 15px;
+    justify-content: unset;
+  }
+  #photogallery {
+    display: none;
+  }
+  #services .service-item {
+    flex-basis: 80%;
+    margin: 1%;
+  }
+
+  #price .price-item {
+    flex-direction: column;
+    align-items: center;
+  }
+  #price ul {
+    padding-inline-start: 0;
+  }
+ 
+}
+@media only screen and (max-width: 370px) {
+  #main-photo {
+    background-position: top right -435px;
+  }
+}
+@media only screen and (max-width: 352px) {
+  .arcticmodal-container .arcticmodal-container_i2 .box-modal {
+    font-size: 15px;
+  }
+@media only screen and (max-width: 320px) {
+  fieldset {
+    margin-left: 7px;
+  }
+  .contacts-appts {
+    margin-left: 7px;
+  }
+  #main-photo h1 span {
+    font-size: 30px;
+    color: rgb(161, 92, 7);
+  }
+  #main-photo .btn {
+    font-size: 15px;
+    top: 202px;
+  }
+  .slider .slick-prev {
+    left: 30px;
+  }
+
+  .slider .slick-next {
+    right: 30px;
+  }
+  #main-photo h1 {
+    top: 245px;
+  }
+}
+
+/* End Media Query */
